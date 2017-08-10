@@ -128,6 +128,12 @@ compile('io.socket:socket.io-client:0.8.3') {//用于SDK网络连接
 ```
 
 # SDK快速接入
+### 1、初始化配置
+
+
+
+
+
 
 
 
