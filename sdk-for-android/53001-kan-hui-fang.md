@@ -143,283 +143,74 @@ private class WatchCallback implements WatchPlayBack.WatchEventCallback {
 | 10807| 用户ID不能为空 |
 | 10808| 当前用户未参会 |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| 10017| 回调信息 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+获取历史聊天评论
+
+| 参数字段 | 描述 |
+| :--- | :--- |
+| webinar_id| 活动id |
+| limit| 每页的数量(取条目最多为50条) |
+| pos| 偏移量(如果从0开始就是最新的一条) |
+| ChatServer.ChatRecordCallback()| 回调信息 |
+
+
+
+```
+   watchPlayback.requestCommentHistory(webinar_id, String.valueOf(limit), String.valueOf(pos), new ChatServer.ChatRecordCallback() {
+            @Override
+            public void onDataLoaded(List<ChatServer.ChatInfo> list) {//接口请求成功}
+            @Override
+            public void onFailed(int errorcode, String messaage) {}
+        });
+
+```
+
+| 错误码 | 描述 |
+| :--- | :--- |
+| 10030| 身份验证出错 |
+| 10402| 当前活动ID错误 |
+| 10403| 活动不属于自己 |
+| 10407| 查询数据为空|
+| 10412| 直播中，获取失败 |
+| 10413| 获取条目最多为50条 |
+| 10409| 参会信息不存在 |
+| 10410| 活动开始时间不存在 |
+
+
+
+#### 5 观看回放绘制PPT和白板
+1	回调WatchPlayBack.DocumentEventCallback
+
+```
+    private class DocCallback implements WatchPlayback.DocumentEventCallback {
+        @Override
+        public void onEvent(String key, List<MessageServer.MsgInfo> msgInfos) {
+            if (msgInfos != null && msgInfos.size() > 0) {
+                documentView.paintPPT(key, msgInfos);
+                documentView.paintBoard(key, msgInfos);
+            }
+        }
+        @Override
+        public void onEvent(MessageServer.MsgInfo msgInfo) {
+            documentView.paintPPT(msgInfo);
+            documentView.paintBoard(msgInfo);
+        }
+}
+
+```
+private class DocCallback implements WatchPlayback.DocumentEventCallback {
+        @Override
+        public void onEvent(String key, List<MessageServer.MsgInfo> msgInfos) {
+            if (msgInfos != null && msgInfos.size() > 0) {
+                documentView.paintPPT(key, msgInfos);
+                documentView.paintBoard(key, msgInfos);
+            }
+        }
+        @Override
+        public void onEvent(MessageServer.MsgInfo msgInfo) {
+            documentView.paintPPT(msgInfo);
+            documentView.paintBoard(msgInfo);
+        }
+}
 
 
 
