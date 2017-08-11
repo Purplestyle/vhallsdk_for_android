@@ -111,6 +111,68 @@ private class WatchCallback implements WatchPlayBack.WatchEventCallback {
     getWatchPlayback().isPlaying();
 ```
 
+#### 4 发送/获取评论信息
+
+发送消息
+| 参数字段 | 描述 |
+| :--- | :--- |
+| text| 评论内容 |
+| user_id| 用户登陆返回的唯一标识 |
+| RequestCallback| 回调信息 |
+
+代码展示
+```
+    getWatchPlayback().sendComment(text, user_id, new VhallSDK.RequestCallback() {
+            @Override
+            public void success() {  //接口请求成功
+                chatView.clearInputContent();
+                chatView.clearChatData();
+		}
+             @Override
+            public void failed(int errorCode, String reason) {}
+        });
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
