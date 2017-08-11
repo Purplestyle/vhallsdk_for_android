@@ -197,20 +197,7 @@ private class WatchCallback implements WatchPlayBack.WatchEventCallback {
 }
 
 ```
-private class DocCallback implements WatchPlayback.DocumentEventCallback {
-        @Override
-        public void onEvent(String key, List<MessageServer.MsgInfo> msgInfos) {
-            if (msgInfos != null && msgInfos.size() > 0) {
-                documentView.paintPPT(key, msgInfos);
-                documentView.paintBoard(key, msgInfos);
-            }
-        }
-        @Override
-        public void onEvent(MessageServer.MsgInfo msgInfo) {
-            documentView.paintPPT(msgInfo);
-            documentView.paintBoard(msgInfo);
-        }
-}
+备注： 在Builder观看回放实例的时候加入 docCallback()
 
 
 
