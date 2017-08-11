@@ -42,6 +42,10 @@ new VhallSDK.RequestCallback() {
         });
 
 ```
+
+#### 2 观看事件回调
+
+
 错误码
 
 | 错误码 | 描述 |
@@ -60,3 +64,59 @@ new VhallSDK.RequestCallback() {
 当用户停止观看时，需要调用VhallSDK中停止观看直播方法，调用此方法，SDK会断开拉流。
 代码展示如下
 getWatchLive().stop();
+
+#### 4 开启弹幕
+	弹幕实现依赖第三方库B站的弹幕引擎•烈焰弹幕 DanmakuFlameMaster 
+第一步，在我们视频view布局的上方再覆盖一个显示弹幕的View， 弹幕的View必须要做成完全透明的, 这样即使覆盖在视频界面的上方也不会影响到视频的正常观看，布局如下：
+
+```
+      <master.flame.danmaku.ui.widget.DanmakuView
+        android:id="@+id/sv_danmaku"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+```
+
+第二步，找到build.gradle添加如下依赖
+
+```
+      dependencies {
+        compile 'com.github.ctiao:DanmakuFlameMaster:0.6.4'
+        compile 'com.github.ctiao:ndkbitmap-armv7a:0.6.4'
+        compile 'com.github.ctiao:ndkbitmap-armv5:0.6.4'
+        compile 'com.github.ctiao:ndkbitmap-x86:0.6.4'
+    }
+```
+
+第三步，初始化弹幕所需的信息，设置回调详情参考Demo，
+
+```
+      HashMap<Integer, Integer> maxLinesPair = new HashMap<Integer, Integer>();
+       maxLinesPair.put(BaseDanmaku.TYPE_SCROLL_RL, 5); // 滚动弹幕最大显示5行
+      
+        // 设置是否禁止重叠
+        HashMap<Integer, Boolean> overlappingEnablePair = new HashMap<Integer, Boolean>();
+        overlappingEnablePair.put(BaseDanmaku.TYPE_SCROLL_RL, true);
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
