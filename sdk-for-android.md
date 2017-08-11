@@ -85,7 +85,7 @@ compile('io.socket:socket.io-client:0.8.3') {//用于SDK网络连接
 ```
    /**
     * VhallSDK初始化
-    * @param Context
+    * @param Context 
     * @param APP_KEY  权限申请时获得
     * @param APP_SECRET_KEY 权限申请时获得
     */
