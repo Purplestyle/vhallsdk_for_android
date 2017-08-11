@@ -56,4 +56,7 @@ new VhallSDK.RequestCallback() {
 | 10048 | 活动现场太火爆，已超过人数上限 |
 | 10410 | 用户信息不存在 |
 
-
+#### 3 停止直播
+当用户停止观看时，需要调用VhallSDK中停止观看直播方法，调用此方法，SDK会断开拉流。
+代码展示如下
+getWatchLive().stop();
