@@ -86,16 +86,15 @@ private class WatchCallback implements WatchPlayBack.WatchEventCallback {
 ```
     getWatchPlayback().pause();
 ```
-
-
-
-```
-getWatchPlayback().stop();
-```
-
+停止播放
 
 ```
- getWatchPlayback().seekTo(playerCurrentPosition);
+    getWatchPlayback().stop();
+```
+获取播放进度
+
+```
+     getWatchPlayback().seekTo(playerCurrentPosition);
 ```
 
 
