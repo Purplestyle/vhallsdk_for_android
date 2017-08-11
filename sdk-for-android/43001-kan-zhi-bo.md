@@ -98,6 +98,37 @@ getWatchLive().stop();
         overlappingEnablePair.put(BaseDanmaku.TYPE_SCROLL_RL, true);
 
 ```
+备注： 具体实现方式参考Demo
+
+#### 5 VR活动
+如果发起的直播时VR直播 , 可以使用陀螺仪功能
+
+```
+      if (!getWatchLive().isVR()) {  // 判断是否是VR活动
+            watchView.showToast("当前活动为非VR活动，不可使用陀螺仪");
+            return;
+       }
+       getWatchLive().setVRHeadTracker(!getWatchLive().isVRHeadTracker()); // 设置陀螺仪
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
