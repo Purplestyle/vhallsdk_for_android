@@ -1,8 +1,6 @@
 # Summary
 
 * [修订记录](README.md)
-* [简介](chapter1.md)
-* [权限开通申请](quan-xian-kai-tong-shen-qing.md)
 * [SDK快速接入](sdk-for-android.md)
   * [1、  初始化配置](sdk-for-android/aaa.md)
   * [2、  用户](sdk-for-android/2-yong-hu.md)
@@ -12,5 +10,8 @@
 * [Android](android.md)
   * [修订记录](android/xiu-ding-ji-lu.md)
   * [简介](android/jian-jie.md)
-  * 权限开通申请
+  * [权限开通申请](android/quan-xian-kai-tong-shen-qing.md)
+  * [SDK快速接入](android/sdkkuai-su-jie-ru.md)
+* [IOS](ios.md)
+  * [修订记录](ios/xiu-ding-ji-lu.md)
 
