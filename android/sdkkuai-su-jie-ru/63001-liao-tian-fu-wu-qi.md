@@ -39,3 +39,30 @@ getBroadcast().connectChatServer ();
 
 getBroadcast().disconnectChatServer ();
 
+
+
+
+
+#### 1、 上下线消息通知
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
