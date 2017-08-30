@@ -94,6 +94,17 @@ chatInfo.event = “msg”
 | showAll| 显示当次直播聊天最多为20条,true显示所有聊天最条为20条|
 | ChatRecordCallback| 聊天记录回调|
 
+```
+    getWatchLive().acquireChatRecord(false, new ChatServer.ChatRecordCallback() {
+            @Override
+            public void onDataLoaded(List<ChatServer.ChatInfo> list) {}
+            @Override
+            public void onFailed(int errorcode, String messaage) {}
+});
+
+
+```
+
 
 
 
