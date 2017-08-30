@@ -85,6 +85,8 @@ chatInfo.event = “msg”
 
 ```
 
+#### 3、 聊天记录
+
 
 
 
