@@ -12,6 +12,7 @@
   * [简介](android/jian-jie.md)
   * [权限开通申请](android/quan-xian-kai-tong-shen-qing.md)
   * [SDK快速接入](android/sdkkuai-su-jie-ru.md)
+    * [1、初始化配置](android/sdkkuai-su-jie-ru/13001-chu-shi-hua-pei-zhi.md)
 * [IOS](ios.md)
   * [修订记录](ios/xiu-ding-ji-lu.md)
 
