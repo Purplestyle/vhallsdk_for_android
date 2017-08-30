@@ -44,31 +44,18 @@ getBroadcast().disconnectChatServer ();
 
 备注：使用此功能默认聊天服务器已开启
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #### 1、 上下线消息通知
 
+消息体说明：chatInfo.event = “online offline”
 
-
+| OnlineData | 描述 |
+| :--- | :--- |
+| role | 用户类型 host:主持人 guest：嘉宾 assistant：助手 user：观众|
+| concurrent_user| 房间内当前用户数|
+| is_gag | 是否被禁言|
+| room | 用户ID|
+| event| 消息类型 (用于区分消息用途)|
+| time| time|
 
 
 
