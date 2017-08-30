@@ -11,6 +11,7 @@
     * [3、发直播](android/sdkkuai-su-jie-ru/33001-fa-zhi-bo.md)
     * [4、看直播](android/sdkkuai-su-jie-ru/43001-kan-zhi-bo.md)
     * [5、看回放](android/sdkkuai-su-jie-ru/53001-kan-hui-fang.md)
+    * [6、聊天服务器](android/sdkkuai-su-jie-ru/63001-liao-tian-fu-wu-qi.md)
 * [IOS](ios.md)
   * [修订记录](ios/xiu-ding-ji-lu.md)
 
