@@ -100,7 +100,7 @@ chatInfo.event = “msg”
             public void onDataLoaded(List<ChatServer.ChatInfo> list) {}
             @Override
             public void onFailed(int errorcode, String messaage) {}
-});
+    });
 
 
 ```
