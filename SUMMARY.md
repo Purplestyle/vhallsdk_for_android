@@ -15,7 +15,7 @@
     * [1、初始化配置](android/sdkkuai-su-jie-ru/13001-chu-shi-hua-pei-zhi.md)
     * [2、用户](android/sdkkuai-su-jie-ru/23001-yong-hu.md)
     * [3、发直播](android/sdkkuai-su-jie-ru/33001-fa-zhi-bo.md)
-    * 4、看直播
+    * [4、看直播](android/sdkkuai-su-jie-ru/43001-kan-zhi-bo.md)
     * 5、看回放
 * [IOS](ios.md)
   * [修订记录](ios/xiu-ding-ji-lu.md)
