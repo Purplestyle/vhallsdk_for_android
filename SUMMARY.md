@@ -9,4 +9,8 @@
   * [3、 发直播](sdk-for-android/3-fa-zhi-bo.md)
   * [4、看直播](sdk-for-android/43001-kan-zhi-bo.md)
   * [5、看回放](sdk-for-android/53001-kan-hui-fang.md)
+* [Android](android.md)
+  * [修订记录](android/xiu-ding-ji-lu.md)
+  * [简介](android/jian-jie.md)
+  * 权限开通申请
 
