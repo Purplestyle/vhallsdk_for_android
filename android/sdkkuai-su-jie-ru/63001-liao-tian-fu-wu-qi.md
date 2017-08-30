@@ -53,9 +53,8 @@ getBroadcast().disconnectChatServer ();
 | role | 用户类型 host:主持人 guest：嘉宾 assistant：助手 user：观众|
 | concurrent_user| 房间内当前用户数|
 | is_gag | 是否被禁言|
-| room | 用户ID|
-| event| 消息类型 (用于区分消息用途)|
-| time| time|
+| attend_count | 参会人数|
+
 
 
 
