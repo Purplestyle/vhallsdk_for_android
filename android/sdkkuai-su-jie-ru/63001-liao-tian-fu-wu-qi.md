@@ -55,6 +55,8 @@ getBroadcast().disconnectChatServer ();
 | is_gag | 是否被禁言|
 | attend_count | 参会人数|
 
+#### 2、 聊天消息
+
 
 
 
