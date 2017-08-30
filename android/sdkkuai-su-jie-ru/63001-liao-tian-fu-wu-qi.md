@@ -23,7 +23,7 @@
         }
         @Override
         public void onChatServerClosed() {}// 聊天服务器关闭
-}
+    }
 
 ```
 
