@@ -44,7 +44,7 @@ getBroadcast().disconnectChatServer ();
 
 
 #### 1、 上下线消息通知
-
+备注：使用此功能默认聊天服务器已开启
 
 
 
