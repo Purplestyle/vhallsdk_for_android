@@ -58,6 +58,8 @@ getBroadcast().disconnectChatServer ();
 #### 2、 聊天消息
 
 目前发起直播和观看直播中可以聊天。发起直播调用getBroadCast().sendChat()方法 。观看直播调用getWatchLive().sendChat()。
+
+chatInfo.event = “msg”
 参数说明：
 
 | 参数字段 | 描述 |
