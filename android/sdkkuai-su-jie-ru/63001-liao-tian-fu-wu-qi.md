@@ -86,7 +86,13 @@ chatInfo.event = “msg”
 ```
 
 #### 3、 聊天记录
+获取SDK聊天记录。聊天记录只在观看直播时候获取，调用acquireChatRecord()
+参数说明：
 
+| 参数字段 | 描述 |
+| :--- | :--- |
+| showAll| 显示当次直播聊天最多为20条,true显示所有聊天最条为20条|
+| ChatRecordCallback| 聊天记录回调|
 
 
 
