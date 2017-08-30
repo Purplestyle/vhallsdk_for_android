@@ -23,13 +23,19 @@
         @Override
         public void onChatServerClosed() {}// 聊天服务器关闭
     }
-    
-    
-    
-    
-    
-    
 ```
 
+| 字段 | 描述 |
+| :--- | :--- |
+| account_id |  用户ID|
+| user_name |  用户昵称|
+| avater |  用户头像|
+| room |  用户ID|
+| event|  消息类型 (用于区分消息用途)|
+| time|  time|
 
+
+getBroadcast().connectChatServer ();
+
+getBroadcast().disconnectChatServer ();
 
