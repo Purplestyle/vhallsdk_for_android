@@ -74,7 +74,7 @@ getBroadcast().disconnectChatServer ();
             @Override
             public void failed(int errorCode, String reason) {}
         });
-getWatchLive().sendChat(text, new VhallSDK.RequestCallback() {// 观看直播时聊天
+    getWatchLive().sendChat(text, new VhallSDK.RequestCallback() {// 观看直播时聊天
             @Override
             public void success() {}
             @Override
