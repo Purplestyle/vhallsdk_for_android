@@ -57,6 +57,31 @@ getBroadcast().disconnectChatServer ();
 
 #### 2、 聊天消息
 
+目前发起直播和观看直播中可以聊天。发起直播调用getBroadCast().sendChat()方法 。观看直播调用getWatchLive().sendChat()。
+参数说明：
+
+| 参数字段 | 描述 |
+| :--- | :--- |
+| text| 聊天内容|
+| VhallSDK.RequestCallback| 回调信息|
+
+发起直播代码展示 && 观看直播代码展示：
+
+```
+    getBroadcast().sendChat(text, new VhallSDK.RequestCallback() { // 发起直播时聊天
+            @Override
+            public void success() {}
+            @Override
+            public void failed(int errorCode, String reason) {}
+        });
+getWatchLive().sendChat(text, new VhallSDK.RequestCallback() {// 观看直播时聊天
+            @Override
+            public void success() {}
+            @Override
+            public void failed(int errorCode, String reason) {}
+        });
+
+```
 
 
 
