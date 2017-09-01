@@ -14,4 +14,7 @@
     * [6、聊天服务器](android/sdkkuai-su-jie-ru/63001-liao-tian-fu-wu-qi.md)
 * [IOS](ios.md)
   * [修订记录](ios/xiu-ding-ji-lu.md)
+  * [简介](ios/jian-jie.md)
+  * [权限开通申请](ios/quan-xian-kai-tong-shen-qing.md)
+  * SDK快速接入
 
