@@ -16,5 +16,14 @@
   * [修订记录](ios/xiu-ding-ji-lu.md)
   * [简介](ios/jian-jie.md)
   * [权限开通申请](ios/quan-xian-kai-tong-shen-qing.md)
-  * SDK快速接入
+  * [SDK快速接入](ios/sdkkuai-su-jie-ru.md)
+    * [1、主要流程图](ios/sdkkuai-su-jie-ru/13001-zhu-yao-liu-cheng-tu.md)
+    * [2、初始化配置](ios/sdkkuai-su-jie-ru/23001-chu-shi-hua-pei-zhi.md)
+    * [3、用户](ios/sdkkuai-su-jie-ru/33001-yong-hu.md)
+    * [4、发直播](ios/sdkkuai-su-jie-ru/43001-fa-zhi-bo.md)
+    * 5、看直播
+    * 6、发直播.看直播.看回放集成方法
+    * 7、聊天服务器
+    * 8、常量定义及错误码定义\(VHallConst.h\)
+    * 9、版本升级重点说明
 
