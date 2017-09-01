@@ -21,9 +21,9 @@
     * [2、初始化配置](ios/sdkkuai-su-jie-ru/23001-chu-shi-hua-pei-zhi.md)
     * [3、用户](ios/sdkkuai-su-jie-ru/33001-yong-hu.md)
     * [4、发直播](ios/sdkkuai-su-jie-ru/43001-fa-zhi-bo.md)
-    * 5、看直播
-    * 6、发直播.看直播.看回放集成方法
-    * 7、聊天服务器
-    * 8、常量定义及错误码定义\(VHallConst.h\)
-    * 9、版本升级重点说明
+    * [5、看直播](ios/sdkkuai-su-jie-ru/53001-kan-zhi-bo.md)
+    * [6、发直播.看直播.看回放集成方法](ios/sdkkuai-su-jie-ru/63001-fa-zhi-64ad-kan-zhi-64ad-kan-hui-fang-ji-cheng-fang-fa.md)
+    * [7、聊天服务器](ios/sdkkuai-su-jie-ru/73001-liao-tian-fu-wu-qi.md)
+    * [8、常量定义及错误码定义\(VHallConst.h\)](ios/sdkkuai-su-jie-ru/83001-chang-liang-ding-yi-ji-cuo-wu-ma-ding-4e4928-vhallconst-h.md)
+    * [9、版本升级重点说明](ios/sdkkuai-su-jie-ru/93001-ban-ben-sheng-ji-zhong-dian-shuo-ming.md)
 
