@@ -1,4 +1,3 @@
-
 #### 1 创建用户
 
 第三方创建用户接口 [http://e.vhall.com/home/vhallapi/active\#user\_register](http://e.vhall.com/home/vhallapi/active#user_register)  
@@ -9,23 +8,29 @@
 当用户在vhall平台创建用户成功之后，调用VhallSDK中的login方法，如果用户需要使用如聊天，问答等功能则必须用户标识。如果不用户标识则默认是游客模式 \(Demo里即使是游客也是可以聊天的，用户可以根据自己的场景控制。问答必须创建用户\)
 
 ```
-   VhallSDK.getInstance().login(username, userpass, new UserInfoDataSource.UserInfoCallback() {
+   VhallSDK.login(username, userpass, new UserInfoDataSource.UserInfoCallback() {
             @Override
-            public void onSuccess(UserInfo userInfo) {}
+            public void onSuccess(UserInfo userInfo) {
+                // 登陆成功
+            }
+
             @Override
-            public void onError(int errorCode, String reason) {}
-   });
+            public void onError(int errorCode, String reason) {
+                // 登陆失败
+            }
+    });
 ```
 
-#### 3 返回错误码
+#### 3 是否登陆
 
+ VhallSDK.isLogin();
 
+#### 4 返回错误码
 
 | 错误码 | 描述 |
 | :--- | :--- |
 | 10501 | 用户不存在 |
 | 10502 | 登陆密码不正确 |
-
 
 
 
