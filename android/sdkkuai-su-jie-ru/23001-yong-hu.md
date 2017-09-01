@@ -22,8 +22,10 @@
 ```
 
 #### 3 是否登陆
-
- VhallSDK.isLogin();
+ 
+ 判断用户是否登陆：
+ 
+         VhallSDK.isLogin();
 
 #### 4 返回错误码
 
