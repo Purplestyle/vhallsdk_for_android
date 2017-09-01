@@ -1,13 +1,13 @@
 #### 1 准备工作
 
-屏幕保持常亮
+##### (1)屏幕保持常亮
 
 ```
       getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 ```
 
-横竖屏发起视频
+##### (2)横竖屏发起视频
 
 ```
       /**
@@ -17,7 +17,7 @@
       setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT);
 ```
 
-设置发起布局
+##### (3)设置发起布局
 
 ```
       <com.vhall.vhalllive.CameraFilterView
@@ -26,13 +26,13 @@
         android:layout_height="match_parent" />
 ```
 
-调用 init\(\)方法
+##### (4)调用 init\(\)方法
 
 ```
       /**
       * pixel_type 发起的分辨率
       */
-      getCameraView().init(pixel_type, Activity(), new RelativeLayout.LayoutParams(0, 0));
+      getCameraView().init(pixel_type, Activity());
 ```
 
 #### 2 发直播
@@ -42,10 +42,11 @@ Broadcast实例 这里需要将之前设置的信息传入Broadcast中 列如自
 
 ```
      Broadcast.Builder builder = new Broadcast.Builder()
-    .cameraView(mView.getCameraView()).frameRate(param.frameRate)
-    .chatCallback(new ChatCallback()) //如需要使用聊天 加上这个回调
-    .videoBitrate(param.videoBitrate)
-    .callback(new BroadcastEventCallback()); // 直播事件回调
+                    .cameraView(mView.getCameraView())
+                    .frameRate(param.frameRate)
+                    .chatCallback(new ChatCallback()) //如需要使用聊天 加上这个回调
+                    .videoBitrate(param.videoBitrate)
+                    .callback(new BroadcastEventCallback()); // 直播事件回调
     broadcast = builder.build();
 ```
 
@@ -56,17 +57,26 @@ Broadcast实例 这里需要将之前设置的信息传入Broadcast中 列如自
 | :--- | :--- |
 | id | 活动ID(9位) |
 | accessToken| 登陆密码不正确 |
-| vhallID | 发起实例 |
+| broadcast| 发起实例 |
 | RequestCallback | 回调信息 |
-备注： 子账号需要先创建，创建后会获取vhallID，当vhallID这个参数不为空时，使用子账号发起直播，使用的Token也需要用子账号重新生成，否则会返回身份验证失败。当vhallID这个参数为空时，默认使用主账号。
+
+备注： 子账号发直播
+     如果子账号发起直播，用户需要创建子账号,具体详见web端API 创建后登陆，当子账号登陆成功，
+     默认使用子账号发起直播，当未登陆,默认只用主账号登陆。
+     使用的Token也需要用子账号重新生成，否则会返回身份验证失败
+
 代码展示
 ```
-     VhallSDK.getInstance().initBroadcast(param.id, param.token, getBroadcast(), 
-	new VhallSDK.RequestCallback(){
+     VhallSDK.initBroadcast(param.broId, param.broToken, getBroadcast(), new VhallSDK.RequestCallback() {
             @Override
-            public void success() {} // 发起成功
+            public void onSuccess() {
+                 // 获取信息成功,此时可以发起直播操作
+            }
+
             @Override
-            public void failed(int errorCode, String reason) {}
+            public void onError(int errorCode, String reason) {
+                 // 获取信息失败,查看失败errorCode
+            }
         });
 
 ```
@@ -130,12 +140,17 @@ Broadcast实例 这里需要将之前设置的信息传入Broadcast中 列如自
 
 以下是代码展示
 ```
-VhallSDK.getInstance().finishBroadcast(param.id, param.token, getBroadcast(), new VhallSDK.RequestCallback() {
+    VhallSDK.finishBroadcast(param.broId, param.broToken, getBroadcast(), new VhallSDK.RequestCallback() {
             @Override
-            public void success() {// 停止成功}
+            public void onSuccess() {
+                
+            }
+
             @Override
-            public void failed(int errorCode, String reason) {// 停止失败}
-});
+            public void onError(int errorCode, String reason) {
+                Log.e(TAG, "finishFailed：" + reason);
+            }
+        });
 ```
 
 
