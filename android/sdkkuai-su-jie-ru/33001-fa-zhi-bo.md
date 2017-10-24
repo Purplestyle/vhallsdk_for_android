@@ -20,7 +20,7 @@
 ##### (3)设置发起布局
 
 ```
-      <com.vhall.vhalllive.CameraFilterView
+      <com.vhall.vhalllive.pushlive.CameraFilterView
         android:id="@+id/cameraview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
